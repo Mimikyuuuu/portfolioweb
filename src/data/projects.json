@@ -260,6 +260,42 @@
       "date": "",
       "tools": [],
       "description": "绘画作品"
+    },
+    {
+      "id": "gallery-bllm",
+      "title": "跟练习作",
+      "image": "/gallery/bllm.jpg",
+      "thumbnail": "/gallery/bllm.jpg",
+      "date": "",
+      "tools": [],
+      "description": "绘画作品"
+    },
+    {
+      "id": "gallery-akai",
+      "title": "赤井秀一",
+      "image": "/gallery/Akai.jpg",
+      "thumbnail": "/gallery/Akai.jpg",
+      "date": "",
+      "tools": [],
+      "description": "绘画作品"
+    },
+    {
+      "id": "gallery-grassland",
+      "title": "草地",
+      "image": "/gallery/grassland.jpg",
+      "thumbnail": "/gallery/grassland.jpg",
+      "date": "",
+      "tools": [],
+      "description": "绘画作品"
+    },
+    {
+      "id": "gallery-heijikazuha",
+      "title": "平次和叶手书切页",
+      "image": "/gallery/HeijiKazuha.jpg",
+      "thumbnail": "/gallery/HeijiKazuha.jpg",
+      "date": "",
+      "tools": [],
+      "description": "绘画作品"
     }
   ]
 }
