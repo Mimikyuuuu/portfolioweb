@@ -392,6 +392,7 @@ a {
 }
 
 .portal-label {
+  appearance: none;
   align-items: center;
   background: rgb(255 251 239 / 78%);
   border: 1px solid rgb(209 134 141 / 70%);
@@ -415,6 +416,11 @@ a {
     transform 180ms ease;
 }
 
+.portal-label:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
 .portal-label--active {
   background: rgb(255 252 239 / 94%);
   box-shadow: 0 14px 32px rgb(149 51 87 / 20%);
@@ -424,6 +430,11 @@ a {
 .portal-label strong {
   color: #d3496c;
   font-size: 12px;
+}
+
+.portal-label__mobile-action,
+.game-3d-hud__mobile-instruction {
+  display: none;
 }
 
 .mobile-3d-controls {
@@ -1992,6 +2003,25 @@ a {
 }
 
 @media (max-width: 680px) {
+  .portal-label-anchor:has(.portal-label--active) {
+    pointer-events: auto;
+  }
+
+  .portal-label--active {
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  .portal-label__desktop-action,
+  .game-3d-hud__desktop-instruction {
+    display: none;
+  }
+
+  .portal-label__mobile-action,
+  .game-3d-hud__mobile-instruction {
+    display: inline;
+  }
+
   .mobile-3d-controls {
     display: flex;
   }

@@ -8,6 +8,7 @@ interface PortalBuildingProps {
   portal: PortalTarget;
   isActive: boolean;
   tint: string;
+  onInteract: (portal: PortalTarget) => void;
 }
 
 const DESK_MODEL_WIDTH = 4.2;
@@ -19,21 +20,21 @@ const DESK_LABEL_POSITION: [number, number, number] = [8, 2.9, -1];
 const SHOW_DESK_COLLIDER = false;
 const DESK_COLOR = '#e07e7e';
 
-export function PortalBuilding({ portal, isActive, tint }: PortalBuildingProps) {
+export function PortalBuilding({ portal, isActive, tint, onInteract }: PortalBuildingProps) {
   if (portal.targetType === 'teardowns') {
-    return <GamingSetupPortal isActive={isActive} portal={portal} />;
+    return <GamingSetupPortal isActive={isActive} onInteract={onInteract} portal={portal} />;
   }
 
   if (portal.targetType === 'pushArticles') {
-    return <DeskPortal isActive={isActive} portal={portal} />;
+    return <DeskPortal isActive={isActive} onInteract={onInteract} portal={portal} />;
   }
 
   if (portal.targetType === 'socialVideos') {
-    return <BedPortal isActive={isActive} portal={portal} />;
+    return <BedPortal isActive={isActive} onInteract={onInteract} portal={portal} />;
   }
 
   if (portal.targetType === 'gallery') {
-    return <PaintingStandPortal isActive={isActive} portal={portal} />;
+    return <PaintingStandPortal isActive={isActive} onInteract={onInteract} portal={portal} />;
   }
 
   return null;
@@ -42,6 +43,29 @@ export function PortalBuilding({ portal, isActive, tint }: PortalBuildingProps) 
 interface FurniturePortalProps {
   portal: PortalTarget;
   isActive: boolean;
+  onInteract: (portal: PortalTarget) => void;
+}
+
+function PortalLabel({ label, portal, isActive, onInteract }: FurniturePortalProps & { label: string }) {
+  return (
+    <button
+      className={isActive ? 'portal-label portal-label--active' : 'portal-label'}
+      disabled={!isActive}
+      onClick={(event) => {
+        event.stopPropagation();
+        onInteract(portal);
+      }}
+      type="button"
+    >
+      <span>{label}</span>
+      {isActive ? (
+        <strong>
+          <span className="portal-label__desktop-action">[E] 进入</span>
+          <span className="portal-label__mobile-action">点击进入</span>
+        </strong>
+      ) : null}
+    </button>
+  );
 }
 
 const BED_MODEL_WIDTH = 5.2;
@@ -71,7 +95,7 @@ const PAINTING_STAND_LABEL_POSITION: [number, number, number] = [0, 2.7, 0];
 const SHOW_PAINTING_STAND_COLLIDER = false;
 const PAINTING_STAND_COLOR = '#ffc1e4';
 
-function DeskPortal({ portal, isActive }: FurniturePortalProps) {
+function DeskPortal({ portal, isActive, onInteract }: FurniturePortalProps) {
   const desk = useFBX('/models/desk-set/source/Desk.fbx');
   const model = useMemo(() => {
     const clone = desk.clone(true);
@@ -127,16 +151,13 @@ function DeskPortal({ portal, isActive }: FurniturePortalProps) {
       <primitive object={model} position={DESK_MODEL_POSITION} />
 
       <Html center distanceFactor={9} position={DESK_LABEL_POSITION} wrapperClass="portal-label-anchor" zIndexRange={[4, 0]}>
-        <div className={isActive ? 'portal-label portal-label--active' : 'portal-label'}>
-          <span>推送排版</span>
-          {isActive ? <strong>[E] 进入</strong> : null}
-        </div>
+        <PortalLabel isActive={isActive} label="推送排版" onInteract={onInteract} portal={portal} />
       </Html>
     </group>
   );
 }
 
-function GamingSetupPortal({ portal, isActive }: FurniturePortalProps) {
+function GamingSetupPortal({ portal, isActive, onInteract }: FurniturePortalProps) {
   const gamingSetup = useFBX('/models/gaming-setup/source/setap1.fbx');
   const model = useMemo(() => {
     const clone = gamingSetup.clone(true);
@@ -192,16 +213,13 @@ function GamingSetupPortal({ portal, isActive }: FurniturePortalProps) {
       <primitive object={model} position={GAMING_MODEL_POSITION} />
 
       <Html center distanceFactor={9} position={GAMING_LABEL_POSITION} wrapperClass="portal-label-anchor" zIndexRange={[4, 0]}>
-        <div className={isActive ? 'portal-label portal-label--active' : 'portal-label'}>
-          <span>游戏理解</span>
-          {isActive ? <strong>[E] 进入</strong> : null}
-        </div>
+        <PortalLabel isActive={isActive} label="游戏理解" onInteract={onInteract} portal={portal} />
       </Html>
     </group>
   );
 }
 
-function BedPortal({ portal, isActive }: FurniturePortalProps) {
+function BedPortal({ portal, isActive, onInteract }: FurniturePortalProps) {
   const bed = useFBX('/models/provence-style-bed/source/Provence Style Bed.fbx');
   const model = useMemo(() => {
     const clone = bed.clone(true);
@@ -257,16 +275,13 @@ function BedPortal({ portal, isActive }: FurniturePortalProps) {
       <primitive object={model} position={BED_MODEL_POSITION} />
 
       <Html center distanceFactor={9} position={BED_LABEL_POSITION} wrapperClass="portal-label-anchor" zIndexRange={[4, 0]}>
-        <div className={isActive ? 'portal-label portal-label--active' : 'portal-label'}>
-          <span>视频作品</span>
-          {isActive ? <strong>[E] 进入</strong> : null}
-        </div>
+        <PortalLabel isActive={isActive} label="视频作品" onInteract={onInteract} portal={portal} />
       </Html>
     </group>
   );
 }
 
-function PaintingStandPortal({ portal, isActive }: FurniturePortalProps) {
+function PaintingStandPortal({ portal, isActive, onInteract }: FurniturePortalProps) {
   const paintingStand = useFBX('/models/painting-stand-with-painting/source/PaintingStand/PaintingStand.fbx');
   const model = useMemo(() => {
     const clone = paintingStand.clone(true);
@@ -328,10 +343,7 @@ function PaintingStandPortal({ portal, isActive }: FurniturePortalProps) {
         wrapperClass="portal-label-anchor"
         zIndexRange={[4, 0]}
       >
-        <div className={isActive ? 'portal-label portal-label--active' : 'portal-label'}>
-          <span>绘画制图</span>
-          {isActive ? <strong>[E] 进入</strong> : null}
-        </div>
+        <PortalLabel isActive={isActive} label="绘画制图" onInteract={onInteract} portal={portal} />
       </Html>
     </group>
   );

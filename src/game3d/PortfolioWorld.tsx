@@ -91,6 +91,16 @@ export function PortfolioWorld({ initialPlayerPosition, isVisible, onEnterProjec
     setPortalPrompt({ targetView, position, step: 'question' });
   };
 
+  const handlePortalLabelInteraction = (portal: PortalTarget) => {
+    if (activePortal?.id !== portal.id || portalPrompt) return;
+
+    const position = playerRef.current?.position;
+    handleEnterProject(portal.targetType, {
+      x: (position?.x ?? 0) * 120 + 1300,
+      y: (position?.z ?? 0) * 120 + 460,
+    });
+  };
+
   const handleConfirmProject = () => {
     if (!portalPrompt) {
       return;
@@ -105,7 +115,8 @@ export function PortfolioWorld({ initialPlayerPosition, isVisible, onEnterProjec
       <MobileControlsProvider>
         <div className={portalPrompt ? 'game-3d-hud game-3d-hud--hidden' : 'game-3d-hud'}>
           <span>WASD / 方向键 移动</span>
-          <span>靠近家具按 E 进入作品页</span>
+          <span className="game-3d-hud__desktop-instruction">靠近家具按 E 进入作品页</span>
+          <span className="game-3d-hud__mobile-instruction">靠近家具后点击标签进入作品页</span>
         </div>
         <MobileControls />
         <KeyboardControls
@@ -125,6 +136,7 @@ export function PortfolioWorld({ initialPlayerPosition, isVisible, onEnterProjec
                 <PortalBuilding
                   isActive={activePortal?.id === portal.id}
                   key={portal.id}
+                  onInteract={handlePortalLabelInteraction}
                   portal={portal}
                   tint={portalColors[index % portalColors.length]}
                 />
