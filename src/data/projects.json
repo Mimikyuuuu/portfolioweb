@@ -33,45 +33,55 @@
     {
       "id": "pokopia",
       "title": "Pokopia",
-      "cover": "/articles/pokopia.jpeg",
+      "cover": "/articles/pokopia.webp",
       "markdown": "/articles/pokopia.md",
       "backgroundColor": "#eee5f7",
       "date": "",
-      "tags": ["生活模拟"]
+      "tags": [
+        "生活模拟"
+      ]
     },
     {
       "id": "infinitynikki",
       "title": "无限暖暖",
-      "cover": "/articles/infinitynikki.jpg",
+      "cover": "/articles/infinitynikki.webp",
       "markdown": "/articles/infinitynikki.md",
       "backgroundColor": "#f7dce8",
       "date": "",
-      "tags": ["开放世界", "换装"]
+      "tags": [
+        "开放世界",
+        "换装"
+      ]
     },
     {
       "id": "tomodachilife",
       "title": "Tomodachi Life",
-      "cover": "/articles/tomodachilife.jpg",
+      "cover": "/articles/tomodachilife.webp",
       "markdown": "/articles/tomodachilife.md",
       "backgroundColor": "#fdfd96",
       "date": "",
-      "tags": [ "社交模拟"]
+      "tags": [
+        "社交模拟"
+      ]
     },
     {
       "id": "persona5",
       "title": "女神异闻录5 皇家版",
-      "cover": "/articles/persona5.jpg",
+      "cover": "/articles/persona5.webp",
       "markdown": "/articles/persona5.md",
       "backgroundColor": "#cc1010",
       "date": "",
-      "tags": ["JRPG", "社交模拟"]
+      "tags": [
+        "JRPG",
+        "社交模拟"
+      ]
     }
   ],
   "pushArticles": [
     {
       "id": "september",
       "title": "九月",
-      "cover": "/articles/September.png",
+      "cover": "/articles/September.webp",
       "tag": "日记体",
       "description": "一份碎碎念月记，无聊的内容和花里胡哨的排版",
       "url": "https://mp.weixin.qq.com/s/oT5bF9JsCGuUpPRbsYVEgA"
@@ -79,7 +89,7 @@
     {
       "id": "october",
       "title": "十月",
-      "cover": "/articles/October.png",
+      "cover": "/articles/October.webp",
       "tag": "日记体",
       "description": "又一份碎碎念月记，无聊的内容和没那么花里胡哨的排版",
       "url": "https://mp.weixin.qq.com/s/PyS15PBpFWmwALkjR-SkSw"
@@ -87,7 +97,7 @@
     {
       "id": "birthday",
       "title": "生日快乐！",
-      "cover": "/articles/birthday.png",
+      "cover": "/articles/birthday.webp",
       "tag": "生日推送",
       "description": "突发奇想给辅导员做的生日企划",
       "url": "https://mp.weixin.qq.com/s/NGvSprCwa6427LuRDgL73g"
@@ -95,7 +105,7 @@
     {
       "id": "daotongniwo",
       "title": "物理学月",
-      "cover": "/articles/daotongniwo.png",
+      "cover": "/articles/daotongniwo.webp",
       "tag": "学生工作",
       "description": "物理学月师生交流会的预告推送",
       "url": "https://mp.weixin.qq.com/s/wdsReUJaxAPx1H3y2E2fDQ"
@@ -105,7 +115,7 @@
     {
       "id": "nikki-wild-heart",
       "title": "【旷野之心 x 蝴蝶舞蹈】暖暖，妈妈是野人！",
-      "cover": "/videos/nikki.jpg",
+      "cover": "/videos/nikki.webp",
       "url": "https://www.bilibili.com/video/BV1NcCdBGEmX/?share_source=copy_web&vd_source=fa8e02ed23b5d501820a9b9949ec639d",
       "platformStats": [
         {
@@ -125,7 +135,7 @@
     {
       "id": "p3p-video",
       "title": "暖暖感悟了一套哈姆子线重制套装",
-      "cover": "/videos/p3p.jpg",
+      "cover": "/videos/p3p.webp",
       "url": "https://www.bilibili.com/video/BV1ebPkzMEC1/?share_source=copy_web&vd_source=fa8e02ed23b5d501820a9b9949ec639d",
       "platformStats": [
         {
@@ -147,8 +157,8 @@
     {
       "id": "luye",
       "title": "鹿野无料",
-      "image": "/gallery/luye.png",
-      "thumbnail": "/gallery/luye.png",
+      "image": "/gallery/luye.webp",
+      "thumbnail": "/gallery/luye.webp",
       "date": "",
       "tools": [],
       "description": "绘画+制图作品"
@@ -156,8 +166,8 @@
     {
       "id": "poster1",
       "title": "海报01",
-      "image": "/gallery/poster1.png",
-      "thumbnail": "/gallery/poster1.png",
+      "image": "/gallery/poster1.webp",
+      "thumbnail": "/gallery/poster1.webp",
       "date": "",
       "tools": [],
       "description": "平面制图作品"
@@ -165,8 +175,8 @@
     {
       "id": "poster2",
       "title": "海报02",
-      "image": "/gallery/poster2.png",
-      "thumbnail": "/gallery/poster2.png",
+      "image": "/gallery/poster2.webp",
+      "thumbnail": "/gallery/poster2.webp",
       "date": "",
       "tools": [],
       "description": "平面制图作品"
@@ -174,8 +184,8 @@
     {
       "id": "gallery-1723563340843",
       "title": "Mimikyu",
-      "image": "/gallery/mmexport1723563340843.png",
-      "thumbnail": "/gallery/mmexport1723563340843.png",
+      "image": "/gallery/mmexport1723563340843.webp",
+      "thumbnail": "/gallery/mmexport1723563340843.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -183,8 +193,8 @@
     {
       "id": "gallery-1723625399458",
       "title": "果然翁",
-      "image": "/gallery/mmexport1723625399458.png",
-      "thumbnail": "/gallery/mmexport1723625399458.png",
+      "image": "/gallery/mmexport1723625399458.webp",
+      "thumbnail": "/gallery/mmexport1723625399458.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -192,8 +202,8 @@
     {
       "id": "gallery-1723990943786",
       "title": "少女",
-      "image": "/gallery/mmexport1723990943786.png",
-      "thumbnail": "/gallery/mmexport1723990943786.png",
+      "image": "/gallery/mmexport1723990943786.webp",
+      "thumbnail": "/gallery/mmexport1723990943786.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -201,8 +211,8 @@
     {
       "id": "gallery-1724164555786",
       "title": "ENFP",
-      "image": "/gallery/mmexport1724164555786.png",
-      "thumbnail": "/gallery/mmexport1724164555786.png",
+      "image": "/gallery/mmexport1724164555786.webp",
+      "thumbnail": "/gallery/mmexport1724164555786.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -210,8 +220,8 @@
     {
       "id": "gallery-1724229000988",
       "title": "高考贺图",
-      "image": "/gallery/mmexport1724229000988.png",
-      "thumbnail": "/gallery/mmexport1724229000988.png",
+      "image": "/gallery/mmexport1724229000988.webp",
+      "thumbnail": "/gallery/mmexport1724229000988.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -219,8 +229,8 @@
     {
       "id": "gallery-1725183873673",
       "title": "粉",
-      "image": "/gallery/mmexport1725183873673.png",
-      "thumbnail": "/gallery/mmexport1725183873673.png",
+      "image": "/gallery/mmexport1725183873673.webp",
+      "thumbnail": "/gallery/mmexport1725183873673.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -228,8 +238,8 @@
     {
       "id": "gallery-1725184025586",
       "title": "蓝",
-      "image": "/gallery/mmexport1725184025586.png",
-      "thumbnail": "/gallery/mmexport1725184025586.png",
+      "image": "/gallery/mmexport1725184025586.webp",
+      "thumbnail": "/gallery/mmexport1725184025586.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -237,8 +247,8 @@
     {
       "id": "gallery-1725285456548",
       "title": "INFP",
-      "image": "/gallery/mmexport1725285456548.png",
-      "thumbnail": "/gallery/mmexport1725285456548.png",
+      "image": "/gallery/mmexport1725285456548.webp",
+      "thumbnail": "/gallery/mmexport1725285456548.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -246,8 +256,8 @@
     {
       "id": "gallery-1726797814555",
       "title": "跆拳道",
-      "image": "/gallery/mmexport1726797814555.png",
-      "thumbnail": "/gallery/mmexport1726797814555.png",
+      "image": "/gallery/mmexport1726797814555.webp",
+      "thumbnail": "/gallery/mmexport1726797814555.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -255,8 +265,8 @@
     {
       "id": "gallery-1727617730840",
       "title": "天空之境",
-      "image": "/gallery/mmexport1727617730840.png",
-      "thumbnail": "/gallery/mmexport1727617730840.png",
+      "image": "/gallery/mmexport1727617730840.webp",
+      "thumbnail": "/gallery/mmexport1727617730840.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -264,8 +274,8 @@
     {
       "id": "gallery-bllm",
       "title": "跟练习作",
-      "image": "/gallery/bllm.jpg",
-      "thumbnail": "/gallery/bllm.jpg",
+      "image": "/gallery/bllm.webp",
+      "thumbnail": "/gallery/bllm.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -273,8 +283,8 @@
     {
       "id": "gallery-akai",
       "title": "赤井秀一",
-      "image": "/gallery/Akai.jpg",
-      "thumbnail": "/gallery/Akai.jpg",
+      "image": "/gallery/Akai.webp",
+      "thumbnail": "/gallery/Akai.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -282,8 +292,8 @@
     {
       "id": "gallery-grassland",
       "title": "草地",
-      "image": "/gallery/grassland.jpg",
-      "thumbnail": "/gallery/grassland.jpg",
+      "image": "/gallery/grassland.webp",
+      "thumbnail": "/gallery/grassland.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
@@ -291,8 +301,8 @@
     {
       "id": "gallery-heijikazuha",
       "title": "平次和叶手书切页",
-      "image": "/gallery/HeijiKazuha.jpg",
-      "thumbnail": "/gallery/HeijiKazuha.jpg",
+      "image": "/gallery/HeijiKazuha.webp",
+      "thumbnail": "/gallery/HeijiKazuha.webp",
       "date": "",
       "tools": [],
       "description": "绘画作品"
